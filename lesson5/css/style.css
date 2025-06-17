@@ -1,0 +1,36 @@
+body {
+    font-size: 20px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.block {
+    display: flex;
+    font-display: row;
+    flex-wrap: wrap;
+    padding: 10px 5px;
+    margin: .5px;
+    max-width: 100%;
+    min-width: 800px;
+    max-height: 600px;
+    min-height: 400px;
+    border: 1px solid #000;
+    background-color: #e6e3ef;
+    border-radius: 20px 0 0 20px;
+    overflow: auto;
+}
+
+.block-1 {
+    padding: 10px 20px;
+    margin: 5px 15px 10px 5px;
+    max-width: 300px;
+    min-width: 200px;
+    max-height: 200px;
+    min-height: 200px;
+    background-color: #bcac8e;
+    justify-content: left;
+    border-radius: 30px;
+    box-shadow: inset 0px 0px 5px black;
+}
