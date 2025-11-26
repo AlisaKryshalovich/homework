@@ -1,0 +1,108 @@
+:root {
+    --general-text: #ffffff;
+    --general-text-2: #141414;
+    --accent-text: #F47521;
+    --accent-bg: #FFE0CB;
+    --description-text: #979797;
+    --description-text-2: #a6a6a6;
+    --background: #dbdbdb;
+    --transition: all .4s;
+    --border-radius: 50%;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+.body {
+    font-family: "Oswald", "Arial", sans-serif;
+    line-height: 1;
+    color: var(--general-text);
+    background: var(--general-text-2);
+    min-width: 450px;
+}
+
+.body--opened-menu {
+    overflow: hidden;
+}
+
+.wrapper {
+    min-height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex-grow: 1;
+}
+
+.container {
+    max-width: 1920px;
+    margin: 0 auto;
+    height: 100%;
+    overflow: visible;
+}
+
+.line {
+    height: 1px;
+    background: rgba(255, 255, 255, .5);
+}
+
+.title {
+    font-size: 70px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.button__small {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 213px;
+    height: 76px;
+    text-transform: uppercase;
+    background: var(--accent-text);
+    border-left: 3px solid var(--general-text);
+    transition: var(--transition);
+}
+
+.button__small:hover {
+    background: var(--accent-bg);
+    color: var(--accent-text);
+    border-left: 3px solid var(--accent-text);
+}
+
+.button__large {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--accent-text);
+    color: var(--general-text-2);
+    text-transform: uppercase;
+    gap: 28px;
+    padding: 43px 0;
+    transition: var(--transition);
+}
+
+.button__large:hover {
+    color: var(--accent-text);
+    background: var(--accent-bg);
+}
+
+.button-icon path {
+    transition: var(--transition);
+}
+
+.button__large:hover .button-icon path {
+    stroke: var(--accent-text);
+    transition: var(--transition);
+}
+
+.button__large span {
+    display: block;
+    font-family: 'Archivo';
+    font-weight: 700;
+}
