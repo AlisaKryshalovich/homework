@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>HW3</title>
+		<link href="style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<form class="form">
+			<fieldset class="form-group">
+				<h2>Ваши личные данные</h2>
+				<label class="label" for="name">
+					<span>Ваше имя</span>
+					<input class="input" type="text" placeholder="Имя" id="name" name="name" required>
+				</label>
+				<label class="label" for="age">
+					<span>Ваш возраст</span>
+					<input class="input" type="number" inputmode="numeric" placeholder="Возраст" id="age" name="name" required>
+				</label>
+				<label class="label" for="phone">
+					<span>Ваш номер телефона</span>
+					<input class="input" type="tel" inputmode="tel" placeholder="Номер телефона" id="phone" name="phone" required>
+				</label>
+				<label class="label" for="email">
+					<span>Ваша почта</span>
+					<input class="input" type="email" inputmode="email" placeholder="Почта" id="email" name="email" required>
+				</label>
+				<label class="label" for="message">
+					<span>Сообщение</span>
+					<textarea class="textarea" type="text" placeholder="Ваше сообщение" id="message" name="message" required></textarea>
+				</label>
+				<label class="label label-agree">
+        <input class="input-agree" type="checkbox" name="agreement" value="first" required>
+        Я принимаю правила
+      </label>
+				<button class="button">Отправить</button>
+			</fieldset>
+			<!-- <fieldset class="form-group"></fieldset> -->
+		</form>
+	</body>
+</html>
