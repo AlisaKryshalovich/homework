@@ -1,0 +1,13 @@
+:root {
+    --general-text: #ffffff;
+    --general-text-2: #141414;
+    --accent-text: #f47521;
+    --accent-bg: #ffe0cb;
+    --description-text: #979797;
+    --description-text-2: #a6a6a6;
+    --background: #dbdbdb;
+    --background-2: #2a2a29;
+    --background-modal: linear-gradient(rgba(30, 30, 30, .9), #000 1810%);
+    --transition: all .5s;
+    --border-radius: 50%;
+}

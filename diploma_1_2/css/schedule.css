@@ -1,0 +1,145 @@
+.schedule {
+	position: relative;
+	z-index: 1;
+}
+
+.schedule::before {
+	content: url("../img/decor/point_16.png");
+	position: absolute;
+	z-index: -1;
+	top: 6%;
+	right: 3%;
+}
+
+.schedule__inner {
+	text-align: center;
+	margin: 0 auto;
+	padding: 110px 0 145px;
+	text-transform: uppercase;
+}
+
+.schedule__title {
+	font-size: 70px;
+	font-weight: 500;
+	margin-bottom: 80px;
+}
+
+.schedule__items {
+	display: flex;
+	justify-content: center;
+	gap: 0 83px;
+	font-size: 30px;
+	font-weight: 500;
+	margin-bottom: 60px;
+}
+
+.schedule__item {
+	display: block;
+	font-size: 30px;
+	font-weight: 500;
+	color: rgb(255, 255, 255, 0.3);
+	padding: 10px 0;
+	white-space: nowrap;
+	position: relative;
+	z-index: 1;
+	transition: var(--transition);
+	transition: color 0.5s ease;
+}
+
+.schedule__item:hover {
+	color: var(--accent-bg);
+}
+
+.schedule__item.active {
+	color: rgb(255, 255, 255, 1);
+}
+
+.schedule__item.active span::before {
+	content: "";
+	position: absolute;
+	left: -10%;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 41.65px;
+	height: 41.65px;
+	border-radius: var(--border-radius);
+	background: var(--accent-text);
+	z-index: -1;
+}
+
+.schedule__block {
+	display: none;
+	animation: fadeIn 0.4s ease;
+	width: 100%;
+}
+
+.schedule__block.active {
+	display: block;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.schedule__scroll {
+	overflow-x: auto;
+	width: 100%;
+}
+
+.schedule__table {
+	font-size: 20px;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	margin: 0 auto;
+
+	table-layout: fixed;
+	border-collapse: collapse;
+	min-width: 1300px;
+	width: max-content;
+}
+
+.schedule__table td {
+	height: 113px;
+	width: 157px;
+	color: rgba(181, 181, 181, 1);
+	border: 1px solid rgba(120, 120, 120, 1);
+}
+
+.schedule__table h4 {
+	color: var(--general-text);
+}
+
+.schedule__table span {
+	display: block;
+	font-family: "Archivo";
+	font-size: 16px;
+	color: rgba(151, 151, 151, 1);
+	line-height: 1.5;
+	text-transform: none;
+	margin-top: 10px;
+}
+
+.schedule__table tr:first-child td {
+	border-top: none;
+}
+
+.schedule__table tr:last-child td {
+	border-bottom: none;
+}
+
+.schedule__table tr td:first-child {
+	border-left: none;
+}
+
+.schedule__table tr td:last-child {
+	border-right: none;
+}

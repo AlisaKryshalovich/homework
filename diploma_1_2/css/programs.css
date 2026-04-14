@@ -1,0 +1,243 @@
+.programs__body {
+	padding: 130px 0;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+}
+
+.decor_point-2::after {
+	top: 11%;
+	left: 6%;
+}
+
+
+.programs__body::before {
+	content: url("../img/decor/WITHIN.png");
+	position: absolute;
+	top: 2%;
+	right: -23.5%;
+	z-index: -1;
+	transform: scale(0.9);
+}
+
+/* .programs__body-top {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	margin-bottom: 86px;
+} */
+
+.programs__title {
+	margin-bottom: 40px;
+}
+
+/* .programs__title-text {
+	display: block;
+	max-width: 468px;
+	font-family: "Archivo";
+	color: var(--description-text);
+	line-height: 1.5;
+} */
+
+/* .programs__cards {
+	display: flex;
+	justify-content: center;
+	margin: 0px 50px;
+	gap: 45px;
+} */
+
+.cards__column {
+	flex: 0 0 20%;
+}
+
+.cards__item {
+	display: block;
+	border-bottom: 2px solid #7c7c7c;
+	white-space: nowrap;
+	z-index: 1;
+	position: relative;
+}
+
+.cards__item::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 6px;
+	background: var(--accent-text);
+	transition: var(--transition);
+	z-index: 2;
+	margin-bottom: -4px;
+}
+
+.cards__item:hover::after {
+	width: 100%;
+}
+
+.cards__item:hover .cards__image::before {
+	width: 100%;
+	opacity: 0.5;
+}
+
+.cards__image {
+	margin: 0px 0px 30px 0px;
+	padding: 0px 0px 130% 0px;
+	overflow: hidden;
+	position: relative;
+}
+
+.cards__image::before {
+	content: "";
+	background: var(--accent-text);
+	opacity: 0;
+	z-index: 2;
+	width: 0%;
+	height: 100%;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	transition: var(--transition);
+}
+
+.cards__image img {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.cards__image {
+		object-position: 100% 0%;
+}
+
+.cards__pocket {
+	text-transform: uppercase;
+}
+
+/* .cards__text {
+	display: block;
+	font-family: "Archivo";
+	font-size: 20px;
+	font-weight: 600;
+	color: var(--accent-text);
+	margin-bottom: 15px;
+	letter-spacing: 2px;
+} */
+
+.cards__text span {
+	color: var(--general-text);
+	margin: 0 16px;
+}
+
+/* .cards__pocket h3 {
+	font-size: 42px;
+	font-weight: 600;
+	margin-bottom: 30px;
+} */
+
+/* ------------------- */
+
+.programs__gallery {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	position: relative;
+	z-index: 1;
+}
+
+.programs__gallery::before {
+	content: url("../img/decor/power_from_within.png");
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 3;
+}
+
+.programs__image {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	z-index: 1;
+	aspect-ratio: 960 / 832;
+	padding: 0 0 86% 0;
+}
+
+.programs__image img {
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-position: 0 30%;
+	top: 0;
+	left: 0;
+}
+
+.programs__image-second {
+	transform: scale(1.1);
+}
+
+/* ------------------ */
+
+.programs__testimonial {
+	position: absolute;
+	z-index: 2;
+
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+.testimonial__inner {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+
+	backdrop-filter: blur(7px);
+	background: rgba(114, 50, 7, 0.5);
+}
+
+.programs__testimonial span {
+	display: block;
+	text-align: center;
+}
+
+.testimonial__icon {
+	margin: 50px 0;
+}
+
+.testimonial__text {
+	font-size: 55px;
+	max-width: 589px;
+	margin-bottom: 42px;
+}
+
+.testimonial__line {
+	height: 3px;
+	width: 83px;
+	background: var(--accent-text);
+	margin-bottom: 65px;
+}
+
+.testimonial__name {
+	font-family: "Archivo";
+	text-align: center;
+}
+
+.testimonial__name p {
+	opacity: 0.7;
+	font-size: 20px;
+	margin-bottom: 11px;
+}
+
+.testimonial__name span {
+	font-size: 30px;
+	font-weight: 700;
+}

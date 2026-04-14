@@ -1,0 +1,53 @@
+.goal__inner {
+	display: flex;
+	background: rgb(219, 219, 219);
+	width: 100%;
+}
+
+.goal__link {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 100%;
+	padding: 55px;
+	border-right: 2px solid var(--general-text-2);
+	color: var(--general-text-2);
+	text-transform: uppercase;
+	transition: var(--transition);
+}
+
+.goal__link:hover {
+	background: var(--accent-bg);
+	color: var(--accent-text);
+}
+
+.goal__link-first {
+	font-size: 42px;
+	font-weight: 600;
+	margin-bottom: 176px;
+}
+
+.goal__link-second {
+	display: flex;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 23px;
+	justify-content: space-between;
+	font-family: "Archivo";
+}
+
+.goal__title {
+	font-family: "Archivo";
+	font-size: 20px;
+	font-weight: 600;
+	color: #f47521;
+	margin-bottom: 20px;
+}
+
+.goal__icon path {
+	transition: var(--transition);
+}
+
+.goal__link:hover .goal__icon path {
+	stroke: var(--accent-text);
+}

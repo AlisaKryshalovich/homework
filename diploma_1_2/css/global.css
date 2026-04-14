@@ -1,0 +1,158 @@
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: 80px;
+}
+
+.body {
+	font-family: "Oswald", "Arial", sans-serif;
+	line-height: 1;
+	color: var(--general-text);
+	background: var(--general-text-2);
+	min-width: 450px;
+
+}
+
+.body--opened-menu {
+	overflow: hidden;
+}
+
+.wrapper {
+	min-height: 100%;
+	width: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+.main {
+	flex-grow: 1;
+	padding-top: 100px; /* задаем чтобы main вышел из-под шапки */ 
+}
+
+.container {
+	max-width: 1920px;
+	margin: 0 auto;
+	height: 100%;
+	overflow: visible;
+}
+
+img {
+	object-fit: cover;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+	outline: 1px solid var(--accent-text);
+	outline-offset: 2px;
+}
+
+.logo {
+	display: block;
+	flex-shrink: 0;
+}
+
+.logo img {
+	width: 100%;
+}
+
+.line {
+	height: 1px;
+	background: rgba(255, 255, 255, 0.5);
+}
+
+.title {
+	font-size: 70px;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+.button__small {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 213px;
+	height: 76px;
+	text-transform: uppercase;
+	background: var(--accent-text);
+	border-left: 3px solid var(--general-text);
+	transition: var(--transition);
+}
+
+.button__small:hover {
+	background: var(--accent-bg);
+	color: var(--accent-text);
+	border-left: 3px solid var(--accent-text);
+}
+
+.button__large {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: var(--accent-text);
+	color: var(--general-text-2);
+	text-transform: uppercase;
+	gap: 28px;
+	padding: 43px 0;
+	transition: var(--transition);
+}
+
+.button__large:hover {
+	color: var(--accent-text);
+	background: var(--accent-bg);
+}
+
+.button-icon path {
+	transition: var(--transition);
+}
+
+.button__large:hover .button-icon path {
+	stroke: var(--accent-text);
+	transition: var(--transition);
+}
+
+.button__large span {
+	display: block;
+	font-family: "Archivo";
+	font-weight: 700;
+}
+
+.pocket__title {
+	font-size: 42px;
+	font-weight: 600;
+	margin-bottom: 30px;
+}
+
+.card__top {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	margin-bottom: 86px;
+}
+
+.card__text {
+	display: block;
+	max-width: 468px;
+	font-family: "Archivo";
+	color: var(--description-text);
+	line-height: 1.5;
+}
+
+.cards__container {
+	display: flex;
+	justify-content: center;
+	margin: 0px 50px;
+	gap: 45px;
+}
+
+.card__text {
+	display: block;
+	font-family: "Archivo";
+	font-size: 20px;
+	font-weight: 600;
+	color: var(--accent-text);
+	margin-bottom: 15px;
+	letter-spacing: 2px;
+}

@@ -1,0 +1,250 @@
+.total__top {
+	background: var(--background);
+	color: var(--general-text-2);
+	padding: 160px 0;
+}
+
+.total__tabs {
+	display: flex;
+	justify-content: space-between;
+	gap: 100px;
+}
+
+.tabs__items {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin-left: 15vw;
+}
+
+.tabs__item {
+	display: block;
+	position: relative;
+	font-size: 100px;
+	font-weight: 600;
+	color: rgba(20, 20, 20, 0.3);
+	text-transform: uppercase;
+	white-space: nowrap;
+	padding: 20px 0;
+	z-index: 1;
+	transition: var(--transition);
+	transition: color 0.5s ease;
+}
+
+.tabs__item:hover {
+	color: var(--general-text-2);
+}
+
+.tabs__item.active {
+	color: rgba(20, 20, 20, 1);
+}
+
+.tabs__item.active::before {
+	content: "";
+	position: absolute;
+	left: -61px;
+	top: 72px;
+	transform: translateY(-50%);
+	width: 145px;
+	height: 145px;
+	border-radius: var(--border-radius);
+	background: var(--accent-text);
+	z-index: -1;
+}
+
+.tabs__block {
+	display: none;
+	animation: fadeIn 0.4s ease;
+}
+
+.tabs__block.active {
+	display: block;
+	margin-right: 15vw;
+	text-align: justify;
+}
+
+.tab__text {
+	margin-bottom: 50px;
+}
+
+.tab__text:last-child {
+	margin-bottom: 0px;
+}
+
+.tab__title {
+	font-size: 30px;
+	font-weight: 500;
+	text-transform: uppercase;
+	margin: 30px 0 20px;
+}
+
+.tab__text span {
+	display: block;
+	font-family: "Archivo";
+	line-height: 1.5;
+	max-width: 468px;
+	color: var(--description-text);
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* --------------------- */
+
+.total__statistics {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	background: var(--background);
+	color: var(--general-text-2);
+}
+
+.statistics__item {
+	padding: 160px 0;
+	border-top: 2px solid var(--general-text-2);
+	border-right: 2px solid var(--general-text-2);
+	text-align: center;
+}
+
+.statistics__item:last-child {
+	border-right: none;
+}
+
+.statistics__title {
+	font-size: 100px;
+	font-weight: 600;
+	margin-bottom: 35px;
+}
+
+.statistics__text {
+	display: block;
+	font-family: "Archivo";
+	font-size: 20px;
+	font-weight: 500;
+	text-transform: uppercase;
+	margin: 0 20px;
+}
+
+/* ---------------------- */
+
+.total__cards {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	background: #303030;
+}
+
+.total__item {
+	display: flex;
+}
+
+.total__image {
+	flex-basis: 50%;
+	overflow: hidden;
+	position: relative;
+	padding: 0 0 50% 0;
+}
+
+.total__image::after {
+	content: "";
+	/* opacity: 0; */
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0%;
+	height: 100%;
+	z-index: 3;
+	background: var(--accent-text);
+	transition: var(--transition);
+}
+
+.total__item:hover .total__image::after {
+	opacity: 0.4;
+	width: 100%;
+}
+
+.total__image img {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.total__image-first,
+.total__image-second {
+	object-position: 0 50%;
+}
+
+.total__image-third {
+	object-position: 0 32%;
+}
+
+.total__image-fourth {
+	object-position: 0 100%;
+}
+
+.total__text {
+	flex-basis: 50%;
+	font-family: "Archivo";
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-left: 52px;
+}
+
+.total__text-first {
+	text-transform: uppercase;
+	color: var(--accent-text);
+	margin-bottom: 20px;
+}
+
+.total__text-title {
+	font-family: "Oswald";
+	font-size: 42px;
+	font-weight: 500;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+
+.total__text-second {
+	color: var(--description-text);
+	max-width: 349px;
+	line-height: 1.5;
+	margin-bottom: 30px;
+}
+
+.total__text-third {
+	font-weight: 700;
+	text-transform: uppercase;
+	line-height: 1.5;
+	letter-spacing: 1.5px;
+	margin-bottom: 10px;
+}
+
+.total__text-fourth {
+	height: 2px;
+	width: 111px;
+	background: var(--accent-text);
+}
+
+.total__text-last {
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+}
+
+.total__text-last::before {
+	content: url("../img/decor/points_big.png");
+	position: absolute;
+	top: 37%;
+	left: 41%;
+	z-index: 2;
+}
